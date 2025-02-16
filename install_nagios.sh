@@ -2,7 +2,7 @@
 sudo apt update -y
 sudo apt install -y wget build-essential apache2 php openssl perl make php-gd libgd-dev libapache2-mod-php libperl-dev libssl-dev daemon autoconf libc6-dev libmcrypt-dev libssl-dev libnet-snmp-perl gettext unzip
 
-cd /tmp
+cd /tmp/git
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.6.tar.gz
 
 sudo useradd nagios
@@ -24,7 +24,7 @@ sudo a2enmod rewrite
 sudo a2enmod cgi
 sudo systemctl restart apache2
 
-cd /tmp
+cd /tmp/git
 wget https://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz
 tar -xzf nagios-plugins-2.3.3.tar.gz
 cd nagios-plugins-2.3.3
